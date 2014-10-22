@@ -4,11 +4,11 @@
 ## Creates a special "matrix" object that can cache its inverse
 
 makeCacheMatrix <- function( x = matrix()) {
-		matrixInverse <- NULL
+        matrixInverse <- NULL
         set <- function( y ) {
-				## x is the original matrix passed in (i.e. not inverted)
-                x <<- y
-				matrixInverse <<- NULL
+            ## x is the original matrix passed in (i.e. not inverted)
+            x <<- y
+            matrixInverse <<- NULL
         }
         get <- function() x
         setMatrixInverse <- function( mi ) matrixInverse <<- mi
@@ -29,7 +29,7 @@ cacheSolve <- function( x, ... ) {
                 message("getting cached matrix inverse")
                 return( matrixInverse )
         }
-		# matrixInverse has not been computed yet
+        # matrixInverse has not been computed yet
         matrixOriginal <- x$get()
         matrixInverse <- solve( matrixOriginal, ... )
         x$setMatrixInverse( matrixInverse )
