@@ -1,5 +1,5 @@
-## 
-##
+## Assignment 2 cache function implementation.
+## Computes matrix inverse if one already doesn't exist
 
 ## Creates a special "matrix" object that can cache its inverse
 
